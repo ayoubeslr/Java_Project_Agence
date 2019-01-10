@@ -17,9 +17,7 @@ public class BienImmobilier {
 	private Rdv visite;
   Commission commission;
 	PromesseVente promesse;
-	List<Annonce> tabAnnonce;
-	List<Rdv> tabRdv;
-	List<BienImmobilier> tabBienImmobilier;
+	
 	Mandat mandat;
 	
 	public BienImmobilier(int id, String adresse, String orientation, String prixDemande,
@@ -35,10 +33,7 @@ public class BienImmobilier {
 		this.rdvMandat = null;
 		this.vente = null;
 		this.visite = null;
-		tabAnnonce = new ArrayList<Annonce>();
-		tabRdv = new ArrayList<Rdv>();
-		tabBienImmobilier = new ArrayList<BienImmobilier>();
-
+		
 	}
 	
 	public void Inscrire() {
