@@ -1,6 +1,7 @@
 package agence;
 
 public class Maison extends BienImmobilier {
+
 	private String surfaceHabitable;
 	private int nombreDePieces;
 	private int nombreEtages;

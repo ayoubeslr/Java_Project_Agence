@@ -1,6 +1,7 @@
 package agence;
 
 public class Terrain extends BienImmobilier {
+
 	private int surfaceAuSole;
 	private int longueurDeLaFacade;
 	

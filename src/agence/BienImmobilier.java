@@ -1,4 +1,7 @@
 package agence;
+import java.util.ArrayList;
+import java.util.List;
+
 
 public class BienImmobilier {
 	private int id;
@@ -12,6 +15,12 @@ public class BienImmobilier {
 	private Rdv rdvMandat;
 	private Rdv vente;
 	private Rdv visite;
+  Commission commission;
+	PromesseVente promesse;
+	List<Annonce> tabAnnonce;
+	List<Rdv> tabRdv;
+	List<BienImmobilier> tabBienImmobilier;
+	Mandat mandat;
 	
 	public BienImmobilier(int id, String adresse, String orientation, String prixDemande,
 			String dateVenteSouhaiter, int nInterne, Personne vendeur) {
@@ -26,12 +35,17 @@ public class BienImmobilier {
 		this.rdvMandat = null;
 		this.vente = null;
 		this.visite = null;
+		tabAnnonce = new ArrayList<Annonce>();
+		tabRdv = new ArrayList<Rdv>();
+		tabBienImmobilier = new ArrayList<BienImmobilier>();
+
 	}
 	
 	public void Inscrire() {
 		
 	}
 	
+
 	public void ajouterAcheteur(Personne acheteur) {
 		this.acheteur = acheteur; 
 	}
@@ -45,5 +59,17 @@ public class BienImmobilier {
 	}
 	public void programmerRdvVisite(Rdv visite) {
 		this.visite = visite;
+
+	public Commission creerCommission() {
+		return this.commission = new Commission();
+	}
+	
+	public PromesseVente creerPromesseVente(String prixVerseVendeur, String adresseNotaire, String dateVente, String fraisVente) {
+		return this.promesse = new PromesseVente(prixVerseVendeur, adresseNotaire, dateVente, fraisVente);
+	}
+	
+	public Mandat creerMandat(String dureeMandat) {
+		return this.mandat = new Mandat(dureeMandat);
+
 	}
 }
