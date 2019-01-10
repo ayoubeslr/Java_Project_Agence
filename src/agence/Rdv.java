@@ -1,7 +1,7 @@
 package agence;
 
 public class Rdv {
-	Personne personne;
+	protected Personne personne;
 	
 	public Rdv(Personne personne) {
 		this.personne = personne;

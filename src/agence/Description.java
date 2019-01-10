@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Description {
-	 List<Docs> tabDocs;
+	private List<Docs> tabDocs;
 	 
 	 public Description() {
 		tabDocs = new ArrayList<Docs>(); 

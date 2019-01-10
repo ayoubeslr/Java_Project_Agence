@@ -1,17 +1,17 @@
 package agence;
 
 public class BienImmobilier {
-	int id;
-	String adresse;
-	String orientation;
-	String prixDemande;
-	String dateVenteSouhaiter;
-	int nInterne;
-	Personne acheteur;
-	Personne vendeur;
-	Rdv rdvMandat;
-	Rdv vente;
-	Rdv visite;
+	private int id;
+	private String adresse;
+	private String orientation;
+	private String prixDemande;
+	private String dateVenteSouhaiter;
+	private int nInterne;
+	protected static Personne acheteur;
+	private Personne vendeur;
+	private Rdv rdvMandat;
+	private Rdv vente;
+	private Rdv visite;
 	
 	public BienImmobilier(int id, String adresse, String orientation, String prixDemande,
 			String dateVenteSouhaiter, int nInterne, Personne vendeur) {

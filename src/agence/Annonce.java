@@ -1,7 +1,7 @@
 package agence;
 
 public class Annonce {
-	Description description;
+	private Description description;
 	public enum Media {TEXTE, HTML, IMAGE, VIDEO};
 	
 	Media monMedia;

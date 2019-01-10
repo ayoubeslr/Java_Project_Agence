@@ -1,10 +1,10 @@
 package agence;
 
 public class Personne {
-	String nom;
-	String adresse;
-	int numeroTel;
-	String mail;
+	private String nom;
+	private String adresse;
+	private int numeroTel;
+	private String mail;
 	
 	public Personne(String nom, String adresse, int numeroTel, String mail) {
 		this.nom = nom;

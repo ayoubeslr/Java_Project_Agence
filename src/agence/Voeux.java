@@ -1,11 +1,11 @@
 package agence;
 
 public class Voeux {
-	String typeBienrecherche;
-	int prixSouhaite;
-	String localisationRecherche;
-	int surfaceSolrecherche;
-	int nombreDePieceRecherche;
+	private String typeBienrecherche;
+	private int prixSouhaite;
+	private String localisationRecherche;
+	private int surfaceSolrecherche;
+	private int nombreDePieceRecherche;
 	
 	public Voeux(String typeBienrecherche, int prixSouhaite, String localisationRecherche, int surfaceSolrecherche,
 			int nombreDePieceRecherche) {
