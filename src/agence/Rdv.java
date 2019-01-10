@@ -1,7 +1,11 @@
 package agence;
 
 public class Rdv {
+
+	protected Personne personne;
 	
-	public Rdv() {}
+	public Rdv(Personne personne) {
+		this.personne = personne;
+	}
 
 }
