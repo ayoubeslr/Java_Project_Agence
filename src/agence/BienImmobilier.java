@@ -15,7 +15,7 @@ public class BienImmobilier {
 	private Rdv rdvMandat;
 	private Rdv vente;
 	private Rdv visite;
-  Commission commission;
+    Commission commission;
 	PromesseVente promesse;
 	
 	Mandat mandat;
@@ -53,7 +53,7 @@ public class BienImmobilier {
 		this.vente = vente;
 	}
 	public void programmerRdvVisite(Rdv visite) {
-		this.visite = visite;
+		this.visite = visite;}
 
 	public Commission creerCommission() {
 		return this.commission = new Commission();
@@ -67,4 +67,13 @@ public class BienImmobilier {
 		return this.mandat = new Mandat(dureeMandat);
 
 	}
+	
+	@Override
+
+	public String toString() {
+
+		return "["+this.id+" / "+this.adresse+" / "+this.orientation+" / "+this.prixDemande+" / "+this.dateVenteSouhaiter+" / "+this.nInterne+" / "+this.vendeur+"]";
+
+	}
+	
 }

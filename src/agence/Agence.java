@@ -10,6 +10,7 @@ public class Agence {
 	private List<Annonce> tabAnnonce;
 	private List<Rdv> tabRdv;
 	private List<BienImmobilier> tabBienImmobilier;
+	private Annonce annonce;
 	
 	public Agence() {
 		tabAnnonce = new ArrayList<Annonce>();
@@ -18,8 +19,15 @@ public class Agence {
 
 	}
 	
-	public void creerAnnonce(BienImmobilier bien, Media media) {
-		this.tabAnnonce = (List<Annonce>) new Annonce(bien, media);
+	/**
+	 * 
+	 * @param bien bien immobilier à ajouter à l'annonce
+	 * @param media forme de l'annonce
+	 */
+	
+	public Annonce creerAnnonce(BienImmobilier bien, String mediaChoisi) {
+		this.annonce = new Annonce(bien, mediaChoisi);
+		return annonce;
 	}
 
 	public void checkVoeux() {}
