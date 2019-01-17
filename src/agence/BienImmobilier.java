@@ -15,8 +15,8 @@ public class BienImmobilier {
 	private Rdv rdvMandat;
 	private Rdv vente;
 	private Rdv visite;
-    Commission commission;
 	PromesseVente promesse;
+	private List<PromesseVente> tabPromesse;
 	
 	Mandat mandat;
 	
@@ -33,6 +33,7 @@ public class BienImmobilier {
 		this.rdvMandat = null;
 		this.vente = null;
 		this.visite = null;
+		this.tabPromesse = new ArrayList<PromesseVente>();
 		
 	}
 	
@@ -54,13 +55,11 @@ public class BienImmobilier {
 	}
 	public void programmerRdvVisite(Rdv visite) {
 		this.visite = visite;}
-
-	public Commission creerCommission() {
-		return this.commission = new Commission();
-	}
 	
 	public PromesseVente creerPromesseVente(String prixVerseVendeur, String adresseNotaire, String dateVente, String fraisVente) {
-		return this.promesse = new PromesseVente(prixVerseVendeur, adresseNotaire, dateVente, fraisVente);
+		this.promesse = new PromesseVente(prixVerseVendeur, adresseNotaire, dateVente, fraisVente);
+		this.tabPromesse.add(this.promesse);
+		return this.promesse;
 	}
 	
 	public Mandat creerMandat(String dureeMandat) {

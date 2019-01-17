@@ -36,4 +36,11 @@ public class Description {
 				this.tabDocs.add(image);
 			}
 		}
+	 
+	 @Override
+	 public String toString() {
+
+			return ""+this.bien+"";
+
+		}
 }

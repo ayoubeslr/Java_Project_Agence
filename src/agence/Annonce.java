@@ -14,7 +14,7 @@ public class Annonce {
 		if (mediaChoisi == "web") {
 			this.media = Media.WEB;
 		}
-		else if (mediaChoisi == "presse spÃ©cialisÃ©e") {
+		else if (mediaChoisi == "presse spécialisée") {
 			this.media = Media.PRESSE_SPE;
 		}
 		else {

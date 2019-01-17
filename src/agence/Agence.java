@@ -11,11 +11,12 @@ public class Agence {
 	private List<Rdv> tabRdv;
 	private List<BienImmobilier> tabBienImmobilier;
 	private Annonce annonce;
+	private Rdv rdvPromesse;
 	
 	public Agence() {
-		tabAnnonce = new ArrayList<Annonce>();
-		tabRdv = new ArrayList<Rdv>();
-		tabBienImmobilier = new ArrayList<BienImmobilier>();
+		this.tabAnnonce = new ArrayList<Annonce>();
+		this.tabRdv = new ArrayList<Rdv>();
+		this.tabBienImmobilier = new ArrayList<BienImmobilier>();
 
 	}
 	
@@ -27,8 +28,21 @@ public class Agence {
 	
 	public Annonce creerAnnonce(BienImmobilier bien, String mediaChoisi) {
 		this.annonce = new Annonce(bien, mediaChoisi);
+		this.tabAnnonce.add(annonce);
 		return annonce;
 	}
-
+	
+	/**
+	 * 
+	 * @param vendeur Représente le vendeur du bien.
+	 * @param acheteur Représente l'acheteur du bien.
+	 * @return Retourne un rendez-vous entre deux personne.
+	 */
+	public Rdv prendreRdvPromesseVente(Personne vendeur, Personne acheteur) {
+		this.rdvPromesse = new Rdv(vendeur, acheteur);
+		this.tabRdv.add(rdvPromesse);
+		return rdvPromesse;
+	}
+	
 	public void checkVoeux() {}
 }
