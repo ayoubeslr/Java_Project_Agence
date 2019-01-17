@@ -10,16 +10,17 @@ public class BienImmobilier {
 	private String prixDemande;
 	private String dateVenteSouhaiter;
 	private int nInterne;
-	protected static Personne acheteur;
+	
+	private Personne acheteur;
 	private Personne vendeur;
-	private Rdv rdvMandat;
-	private Rdv vente;
-	private Rdv visite;
-  Commission commission;
+	private List<Annonce> annonces;
+	
+	private List<Rdv> ventes;
+	private List<Rdv> visites;
+	private List<Rdv> mandats;
+	
+	Commission commission;
 	PromesseVente promesse;
-	List<Annonce> tabAnnonce;
-	List<Rdv> tabRdv;
-	List<BienImmobilier> tabBienImmobilier;
 	Mandat mandat;
 	
 	public BienImmobilier(int id, String adresse, String orientation, String prixDemande,
@@ -30,14 +31,17 @@ public class BienImmobilier {
 		this.prixDemande = prixDemande;
 		this.dateVenteSouhaiter = dateVenteSouhaiter;
 		this.nInterne = nInterne;
+		
 		this.acheteur = null;
 		this.vendeur = vendeur;
-		this.rdvMandat = null;
-		this.vente = null;
-		this.visite = null;
-		tabAnnonce = new ArrayList<Annonce>();
-		tabRdv = new ArrayList<Rdv>();
-		tabBienImmobilier = new ArrayList<BienImmobilier>();
+		
+		this.mandat = null;
+		this.promesse = null;
+		this.visites = null;
+		
+		this.ventes = new ArrayList<Rdv>();
+		this.mandats = new ArrayList<Rdv>();
+		this.visites = new ArrayList<Rdv>();
 
 	}
 	
@@ -45,11 +49,10 @@ public class BienImmobilier {
 		
 	}
 	
-
-	public void ajouterAcheteur(Personne acheteur) {
-		this.acheteur = acheteur; 
-	}
 	
+	public void enregistrerMandat(Mandat manda) {
+		
+	}
 	public void programmerRdvMandat(Rdv mandat) {
 		this.rdvMandat = mandat;
 	}
@@ -59,7 +62,7 @@ public class BienImmobilier {
 	}
 	public void programmerRdvVisite(Rdv visite) {
 		this.visite = visite;
-
+	}
 	public Commission creerCommission() {
 		return this.commission = new Commission();
 	}
@@ -70,6 +73,5 @@ public class BienImmobilier {
 	
 	public Mandat creerMandat(String dureeMandat) {
 		return this.mandat = new Mandat(dureeMandat);
-
 	}
 }
