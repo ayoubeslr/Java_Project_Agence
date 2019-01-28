@@ -26,13 +26,15 @@ public class Personne {
 		this.voeux = voeux;
 	}
 	
-	public ArrayList<Mandat> voirMandat(){
+	public ArrayList<Mandat> getMandats(){
 		return this.mandat;
 	}
 	
-	public ArrayList<PromesseVente> recupererPrommesseDeVente(PromesseVente promVente) {
+	public ArrayList<PromesseVente> getPromesseDeVente(PromesseVente promVente) {
 		return this.promesseDeVentes;
 	}
+	
+	
 	
 	
 }

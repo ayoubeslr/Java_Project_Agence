@@ -1,4 +1,6 @@
 package agence;
+
+import java.sql.Date;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,11 +15,11 @@ public class BienImmobilier {
 	
 	private Personne acheteur;
 	private Personne vendeur;
-	private List<Annonce> annonces;
+	private ArrayList<Annonce> annonces;
 	
-	private List<Rdv> ventes;
-	private List<Rdv> visites;
-	private List<Rdv> mandats;
+	private ArrayList<Rdv> ventes;
+	private ArrayList<Rdv> visites;
+	private ArrayList<Rdv> mandats;
 	
 	Commission commission;
 	PromesseVente promesse;
@@ -45,33 +47,45 @@ public class BienImmobilier {
 
 	}
 	
+	public Mandat getMandat() {
+		return this.mandat;
+	}
+	
+	public PromesseVente getPromesseVente() {
+		return this.promesse;
+	}
+	
+	public List<Rdv> getMandats(){
+		return this.mandats;
+	}
+	
+	public List<Rdv> getVentes(){
+		return this.ventes;
+	}
+	
+	public List<Rdv> getVisite(){
+		return this.visites;
+	}
+	
 	public void Inscrire() {
 		
 	}
 	
+	public void enregistrerAcheteur(Personne acheteur) {
+		if(this.acheteur == null) {
+			this.acheteur = acheteur;
+		}
+	}
 	
-	public void enregistrerMandat(Mandat manda) {
+	public void enregistrerMandat(Personne vendeur, int prix, Date dateVente, Date dureePartie) {
+		this.mandat = new Mandat(this.vendeur,prix,dateVente,dureePartie);
+		this.vendeur.getMandats().add(this.mandat);
 		
 	}
-	public void programmerRdvMandat(Rdv mandat) {
-		this.rdvMandat = mandat;
-	}
 	
-	public void programmerRdvVente(Rdv vente) {
-		this.vente = vente;
-	}
-	public void programmerRdvVisite(Rdv visite) {
-		this.visite = visite;
-	}
-	public Commission creerCommission() {
+	public Commission enregistrerCommission() {
 		return this.commission = new Commission();
 	}
 	
-	public PromesseVente creerPromesseVente(String prixVerseVendeur, String adresseNotaire, String dateVente, String fraisVente) {
-		return this.promesse = new PromesseVente(prixVerseVendeur, adresseNotaire, dateVente, fraisVente);
-	}
-	
-	public Mandat creerMandat(String dureeMandat) {
-		return this.mandat = new Mandat(dureeMandat);
-	}
 }
+

@@ -12,23 +12,27 @@ public class Mandat {
 	public Mandat(Personne vendeur, int prix, Date dateVente, Date dureePartie) {
 		super();
 		this.vendeur = vendeur;
-		Prix = prix;
+		this.Prix = prix;
 		this.dateVente = dateVente;
 		this.dureePartie = dureePartie;
 	}
 	
 	
-	public Personne Vendeur() {
+	public Personne getVendeur() {
 		return this.vendeur;
 	}
 	
-	public int Prix() {
+	public int getPrix() {
 		return this.Prix;
 	}
 	
-	public Date duree() {
+	public Date getDureePartie() {
 		return dureePartie;
 	}
 	
-	
+	public Date getDateVente() {
+		return this.dateVente;
+	}
+
+
 }
