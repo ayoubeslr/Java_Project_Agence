@@ -2,9 +2,9 @@ package agence;
 
 public class Appart extends BienImmobilier {
 
-	private int nombreDePieces;
-	private int etage;
-	private int chargesMensuelles;
+	protected int nombreDePieces;
+	protected int etage;
+	protected int chargesMensuelles;
 	
 	public Appart(int id, String adresse, String orientation, String prixDemande, String dateVenteSouhaiter,
 			int nInterne, int nombreDePieces, int etage, int chargesMensuelles) {
@@ -13,6 +13,7 @@ public class Appart extends BienImmobilier {
 		this.nombreDePieces = nombreDePieces;
 		this.etage = etage;
 		this.chargesMensuelles = chargesMensuelles;
+		this.type = "APPART";
 	}
 	
 	

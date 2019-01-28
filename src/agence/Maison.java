@@ -2,10 +2,10 @@ package agence;
 
 public class Maison extends BienImmobilier {
 
-	private String surfaceHabitable;
-	private int nombreDePieces;
-	private int nombreEtages;
-	private String moyenDeChauffage;
+	protected String surfaceHabitable;
+	protected int nombreDePieces;
+	protected int nombreEtages;
+	protected String moyenDeChauffage;
 
 	public Maison(int id, String adresse, String orientation, String prixDemande, String dateVenteSouhaiter,
 			int nInterne, String surfaceHabitable, int nombreDePieces, int nombreEtages, String moyenDeChauffage) {
@@ -15,6 +15,7 @@ public class Maison extends BienImmobilier {
 		this.nombreDePieces = nombreDePieces;
 		this.nombreEtages = nombreEtages;
 		this.moyenDeChauffage = moyenDeChauffage;
+		this.type = "MAISON";
 	}
 
 }

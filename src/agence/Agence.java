@@ -12,6 +12,7 @@ public class Agence {
 	private List<BienImmobilier> tabBienImmobilier;
 	private Annonce annonce;
 	private Rdv rdvPromesse;
+	private BienImmobilier bien;
 	
 	public Agence() {
 		this.tabAnnonce = new ArrayList<Annonce>();
@@ -44,5 +45,18 @@ public class Agence {
 		return rdvPromesse;
 	}
 	
-	public void checkVoeux() {}
+	public BienImmobilier ajouterBien(int id, String adresse, String orientation, String prixDemande, String dateVenteSouhaiter, int nInterne, Personne vendeur) {
+		this.bien = new BienImmobilier(id, adresse, orientation, prixDemande, dateVenteSouhaiter, nInterne, vendeur);
+		this.tabBienImmobilier.add(bien);
+		return bien;
+	}
+	
+	public String checkVoeux(Voeux voeux) {
+		for(BienImmobilier i : this.tabBienImmobilier) {
+			if (voeux.typeBienrecherche == "TERRAIN") {
+				if ((voeux.localisationRecherche == i.orientation) && (voeux.nombreDePieceRecherche == i.) && (voeux.prixSouhaite  ==) && (voeux.surfaceSolrecherche ==) && (voeux.typeBienrecherche ==))
+				return ("Ce terrain pourrait vous convenir: ");
+			}
+		}
+	}
 }

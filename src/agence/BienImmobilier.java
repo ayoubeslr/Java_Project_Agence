@@ -4,19 +4,20 @@ import java.util.List;
 
 
 public class BienImmobilier {
-	private int id;
-	private String adresse;
-	private String orientation;
-	private String prixDemande;
-	private String dateVenteSouhaiter;
-	private int nInterne;
+	protected int id;
+	protected String adresse;
+	protected String orientation;
+	protected String prixDemande;
+	protected String dateVenteSouhaiter;
+	protected int nInterne;
 	protected static Personne acheteur;
-	private Personne vendeur;
-	private Rdv rdvMandat;
-	private Rdv vente;
-	private Rdv visite;
+	protected Personne vendeur;
+	protected Rdv rdvMandat;
+	protected Rdv vente;
+	protected Rdv visite;
 	PromesseVente promesse;
-	private List<PromesseVente> tabPromesse;
+	protected List<PromesseVente> tabPromesse;
+	String type;
 	
 	Mandat mandat;
 	
@@ -34,6 +35,8 @@ public class BienImmobilier {
 		this.vente = null;
 		this.visite = null;
 		this.tabPromesse = new ArrayList<PromesseVente>();
+		this.type = null;
+		
 		
 	}
 	
