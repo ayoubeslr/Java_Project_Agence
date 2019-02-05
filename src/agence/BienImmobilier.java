@@ -7,7 +7,7 @@ public class BienImmobilier {
 	protected int id;
 	protected String adresse;
 	protected String orientation;
-	protected String prixDemande;
+	protected int prixDemande;
 	protected String dateVenteSouhaiter;
 	protected int nInterne;
 	protected static Personne acheteur;
@@ -21,7 +21,7 @@ public class BienImmobilier {
 	
 	Mandat mandat;
 	
-	public BienImmobilier(int id, String adresse, String orientation, String prixDemande,
+	public BienImmobilier(int id, String adresse, String orientation, int prixDemande,
 			String dateVenteSouhaiter, int nInterne, Personne vendeur) {
 		this.id = id;
 		this.adresse = adresse;
