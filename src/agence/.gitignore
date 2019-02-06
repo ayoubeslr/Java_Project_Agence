@@ -16,3 +16,11 @@
 /PersonneMoral.class
 /PersonneMorale.class
 /PersonnePhysique.class
+/Commission.class
+/Html.class
+/Image.class
+/Mandat.class
+/PromesseVente.class
+/Texte.class
+/Video.class
+/TestSerialisation.class

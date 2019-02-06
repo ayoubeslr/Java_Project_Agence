@@ -4,25 +4,24 @@ import java.util.List;
 
 
 public class BienImmobilier {
-	private int id;
-	private String adresse;
-	private String orientation;
-	private String prixDemande;
-	private String dateVenteSouhaiter;
-	private int nInterne;
+	protected int id;
+	protected String adresse;
+	protected String orientation;
+	protected int prixDemande;
+	protected String dateVenteSouhaiter;
+	protected int nInterne;
 	protected static Personne acheteur;
-	private Personne vendeur;
-	private Rdv rdvMandat;
-	private Rdv vente;
-	private Rdv visite;
-  Commission commission;
+	protected Personne vendeur;
+	protected Rdv rdvMandat;
+	protected Rdv vente;
+	protected Rdv visite;
 	PromesseVente promesse;
-	List<Annonce> tabAnnonce;
-	List<Rdv> tabRdv;
-	List<BienImmobilier> tabBienImmobilier;
+	protected List<PromesseVente> tabPromesse;
+	String type;
+	
 	Mandat mandat;
 	
-	public BienImmobilier(int id, String adresse, String orientation, String prixDemande,
+	public BienImmobilier(int id, String adresse, String orientation, int prixDemande,
 			String dateVenteSouhaiter, int nInterne, Personne vendeur) {
 		this.id = id;
 		this.adresse = adresse;
@@ -35,10 +34,10 @@ public class BienImmobilier {
 		this.rdvMandat = null;
 		this.vente = null;
 		this.visite = null;
-		tabAnnonce = new ArrayList<Annonce>();
-		tabRdv = new ArrayList<Rdv>();
-		tabBienImmobilier = new ArrayList<BienImmobilier>();
-
+		this.tabPromesse = new ArrayList<PromesseVente>();
+		this.type = null;
+		
+		
 	}
 	
 	public void Inscrire() {
@@ -58,18 +57,25 @@ public class BienImmobilier {
 		this.vente = vente;
 	}
 	public void programmerRdvVisite(Rdv visite) {
-		this.visite = visite;
-
-	public Commission creerCommission() {
-		return this.commission = new Commission();
-	}
+		this.visite = visite;}
 	
 	public PromesseVente creerPromesseVente(String prixVerseVendeur, String adresseNotaire, String dateVente, String fraisVente) {
-		return this.promesse = new PromesseVente(prixVerseVendeur, adresseNotaire, dateVente, fraisVente);
+		this.promesse = new PromesseVente(prixVerseVendeur, adresseNotaire, dateVente, fraisVente);
+		this.tabPromesse.add(this.promesse);
+		return this.promesse;
 	}
 	
 	public Mandat creerMandat(String dureeMandat) {
 		return this.mandat = new Mandat(dureeMandat);
 
 	}
+	
+	@Override
+
+	public String toString() {
+
+		return "["+this.id+" / "+this.adresse+" / "+this.orientation+" / "+this.prixDemande+" / "+this.dateVenteSouhaiter+" / "+this.nInterne+" / "+this.vendeur+"]";
+
+	}
+	
 }

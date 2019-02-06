@@ -1,11 +1,11 @@
 package agence;
 
 public class Voeux {
-	private String typeBienrecherche;
-	private int prixSouhaite;
-	private String localisationRecherche;
-	private int surfaceSolrecherche;
-	private int nombreDePieceRecherche;
+	protected String typeBienrecherche;
+	protected int prixSouhaite;
+	protected String localisationRecherche;
+	protected int surfaceSolrecherche;
+	protected int nombreDePieceRecherche;
 	
 	public Voeux(String typeBienrecherche, int prixSouhaite, String localisationRecherche, int surfaceSolrecherche,
 			int nombreDePieceRecherche) {
@@ -16,5 +16,11 @@ public class Voeux {
 		this.nombreDePieceRecherche = nombreDePieceRecherche;
 	}
 	
-	
+	@Override
+
+	public String toString() {
+
+		return "Voilà la description de votre voeux: \nType de bien recherché: "+this.typeBienrecherche+"\nPrix souhaité: "+this.prixSouhaite+" euros\nLocalisation recherchée: "+this.localisationRecherche+"\nSurface au sol recherchée: "+this.surfaceSolrecherche+" mètres carrés\nNombre de pièces recherchées: "+this.nombreDePieceRecherche+" pièces";
+
+	}
 }
