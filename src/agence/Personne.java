@@ -23,7 +23,7 @@ public class Personne {
 
 	public String toString() {
 
-		return "["+this.nom+"]";
+		return this.nom;
 
 	}
 	
