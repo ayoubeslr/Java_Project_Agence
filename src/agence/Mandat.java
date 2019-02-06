@@ -9,6 +9,13 @@ public class Mandat {
 	private Date dateVente;
 	private Date dureePartie;
 	
+	/**
+	 * Constructeur de la classe Mandat
+	 * @param vendeur
+	 * @param prix
+	 * @param dateVente
+	 * @param dureePartie
+	 */
 	public Mandat(Personne vendeur, int prix, Date dateVente, Date dureePartie) {
 		super();
 		this.vendeur = vendeur;
@@ -17,19 +24,34 @@ public class Mandat {
 		this.dureePartie = dureePartie;
 	}
 	
-	
+	/**
+	 * Cette methode permet de recuperer un Vendeur
+	 * @return
+	 */
 	public Personne getVendeur() {
 		return this.vendeur;
 	}
 	
+	/**
+	 * Cette methode permet de recuperer les prix
+	 * @return
+	 */
 	public int getPrix() {
 		return this.Prix;
 	}
 	
+	/**
+	 *
+	 * @return la date d'une partie
+	 */
 	public Date getDureePartie() {
 		return dureePartie;
 	}
 	
+	/**
+	 * Cette methode permet de recuperer la date d'une vente
+	 * @return la date d'une Vente
+	 */
 	public Date getDateVente() {
 		return this.dateVente;
 	}
