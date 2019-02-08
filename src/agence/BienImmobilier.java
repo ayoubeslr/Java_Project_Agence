@@ -40,6 +40,17 @@ public class BienImmobilier {
 		
 	}
 	
+	public Personne getterAcheteur() { return this.acheteur; }
+	
+	public Rdv getterRdvMandat() { return this.rdvMandat; }
+	
+	public Rdv getterVente() { return this.vente; }
+	
+	public Rdv getterVisite() { return this.visite; }
+	
+	public PromesseVente getterPromesse() { return this.promesse; }
+	
+	public Mandat getterMandat() { return this.mandat; }
 
 	public void ajouterAcheteur(Personne acheteur) {
 		this.acheteur = acheteur; 
