@@ -23,7 +23,7 @@ public class Personne {
 
 	public String toString() {
 
-		return "["+this.nom+"]";
+		return this.nom;
 
 	}
 	
@@ -34,7 +34,7 @@ public class Personne {
 	 */
 	public String signerPromesseVente(PromesseVente promesse) {
 		promesse.signe = true;
-		int prix = Integer.parseInt(promesse.prixVerseVendeur);
+		int prix = promesse.prixVerseVendeur;
 		int premierVersement = (10*prix)/100;
 		int newPrixVerseVendeur = prix - premierVersement;
 		return("La promesse de vente est signée. \nL'acheteur a déjà versé : "+premierVersement+ " euros et devra verser: "+newPrixVerseVendeur+" euros le "+promesse.dateVente+" + "+promesse.fraisVente+ " euros de frais de vente.");
@@ -68,7 +68,15 @@ public class Personne {
 	 * @return Retourne un nouveau voeux.
 	 */
 	
-	public Voeux decrireVoeux(String typeBienrecherche, int prixSouhaite, String localisationRecherche, int surfaceSolrecherche, int nombreDePieceRecherche) {
+	public Voeux decrireVoeuxMaison(String typeBienrecherche, int prixSouhaite, String localisationRecherche, int surfaceSolrecherche, int nombreDePieceRecherche) {
+		return this.voeux = new Voeux(typeBienrecherche, prixSouhaite, localisationRecherche, surfaceSolrecherche, nombreDePieceRecherche);
+	}
+	
+	public Voeux decrireVoeuxTerrain(String typeBienrecherche, int prixSouhaite, String localisationRecherche, int surfaceSolrecherche) {
+		return this.voeux = new Voeux(typeBienrecherche, prixSouhaite, localisationRecherche, surfaceSolrecherche);
+	}
+	
+	public Voeux decrireVoeuxAppart(String typeBienrecherche, int prixSouhaite, String localisationRecherche, int surfaceSolrecherche,int nombreDePieceRecherche) {
 		return this.voeux = new Voeux(typeBienrecherche, prixSouhaite, localisationRecherche, surfaceSolrecherche, nombreDePieceRecherche);
 	}
 

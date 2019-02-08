@@ -12,7 +12,7 @@ public class Mandat {
 
 	public String toString() {
 
-		return "Voilà la durée du mandat: "+this.dureeMandat;
+		return "Vos informations ont été enregistrées, voilà la durée du mandat: "+this.dureeMandat;
 	}
 
 }

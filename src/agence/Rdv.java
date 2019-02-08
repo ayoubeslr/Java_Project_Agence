@@ -18,7 +18,7 @@ public class Rdv {
 
 	public String toString() {
 
-		return "Un rendez-vous est prévu entre "+this.personne1+" et "+this.personne2;
+		return "Un rendez-vous est prévu entre "+this.personne1+" et "+this.personne2+" pour signer la promesse de vente";
 
 	}
 

@@ -27,7 +27,7 @@ public class Annonce {
 
 	public String toString() {
 
-		return "[Description du bien: "+this.description+"]";
+		return "Annonce dans "+this.media+ "... description du bien: "+this.description+"";
 
 	}
 }

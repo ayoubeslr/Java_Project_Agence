@@ -2,19 +2,19 @@ package agence;
 
 public class PromesseVente {
 	
-	String prixVerseVendeur;
+	int prixVerseVendeur;
 	private String adresseNotaire;
 	String dateVente;
 	String fraisVente;
 	Commission commission;
 	boolean signe;
 	
-	public PromesseVente(String prixVerseVendeur, String adresseNotaire, String dateVente, String fraisVente) {
-		this.prixVerseVendeur = prixVerseVendeur;
+	public PromesseVente(int prixDemande2, String adresseNotaire, String dateVente, String fraisVente) {
+		this.prixVerseVendeur = prixDemande2;
 		this.adresseNotaire = adresseNotaire;
 		this.dateVente = dateVente;
 		this.fraisVente = fraisVente;
-		this.commission = new Commission(prixVerseVendeur);
+		this.commission = new Commission(prixDemande2);
 		this.signe = false;
 	}
 	
