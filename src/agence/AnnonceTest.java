@@ -37,7 +37,12 @@ class AnnonceTest {
 	@Test
 	void testToString() {
 		annonceWeb.toString();
+		annoncePress.toString();
+		annonceMedia.toString();
 		assertEquals("Annonce dans WEB... description du bien: "+description+ "", annonceWeb.toString());
+		assertEquals("Annonce dans PRESSE_SPE... description du bien: "+description+ "", annoncePress.toString());
+		assertEquals("Annonce dans JOURNAL_LOC... description du bien: "+description+ "", annonceMedia.toString());
+
 	}
 
 }
