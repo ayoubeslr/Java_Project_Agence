@@ -36,4 +36,5 @@ public class Voeux {
 			return "Voilà la description de votre voeux: \nType de bien recherché: "+this.typeBienrecherche+"\nPrix souhaité: "+this.prixSouhaite+" euros\nLocalisation recherchée: "+this.localisationRecherche+"\nNombre de pièces recherchées: "+this.nombreDePieceRecherche+" pièces";
 		}
 	}
+	
 }

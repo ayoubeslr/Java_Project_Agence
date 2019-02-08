@@ -18,7 +18,7 @@ public class Personne {
 		this.type = type;
 		this.voeux = null;
 	}
-	
+
 	@Override
 
 	public String toString() {

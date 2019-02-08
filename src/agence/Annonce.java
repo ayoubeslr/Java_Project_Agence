@@ -23,6 +23,28 @@ public class Annonce {
 		this.description = new Description(bien, media);
   }
 	
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Annonce other = (Annonce) obj;
+		if (description == null) {
+			if (other.description != null)
+				return false;
+		} else if (!description.equals(other.description))
+			return false;
+		if (media != other.media)
+			return false;
+		return true;
+	}
+
+
+
 	@Override
 
 	public String toString() {

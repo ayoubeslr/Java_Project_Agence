@@ -10,12 +10,6 @@ public class Commission {
 	}
 	
 	@Override
-
-	public String toString() {
-		return ""+this.commission+"";
-	}
-	
-	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
 			return true;
@@ -28,7 +22,12 @@ public class Commission {
 			return false;
 		return true;
 	}
-	
-	
 
+
+
+	@Override
+	public String toString() {
+		return ""+this.commission+"";
+	}
+	
 }

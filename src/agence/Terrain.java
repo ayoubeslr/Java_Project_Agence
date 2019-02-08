@@ -13,9 +13,9 @@ public class Terrain extends BienImmobilier {
 		this.type = "TERRAIN";
 		
 	}
-	
-	@Override
 
+
+	@Override
 	public String toString() {
 
 		return "Adresse: "+this.adresse+" \n Orientation: "+this.orientation+" \n Prix demandé: "+this.prixDemande+" \n Date de vente souhaitée: "+this.dateVenteSouhaiter+" \n Nom du vendeur: "+this.vendeur+" \n Surface au sol: "+this.surfaceAuSol+" \n Taille de la façade: "+this.longueurDeLaFacade;

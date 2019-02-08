@@ -19,9 +19,62 @@ public class Agence {
 		this.tabAnnonce = new ArrayList<Annonce>();
 		this.tabRdv = new ArrayList<Rdv>();
 		this.tabBienImmobilier = new ArrayList<BienImmobilier>();
+		this.tabBienVendus = new ArrayList<BienImmobilier>();
 
 	}
 	
+	public Annonce getterAnnonce() { return this.annonce; }
+	public Rdv getterPromesse() { return this.rdvPromesse; }
+	public BienImmobilier getterBien() { return this.bien; }
+	public List<BienImmobilier> gettertabBienVendus() { return this.tabBienVendus; }
+	
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Agence other = (Agence) obj;
+		if (annonce == null) {
+			if (other.annonce != null)
+				return false;
+		} else if (!annonce.equals(other.annonce))
+			return false;
+		if (bien == null) {
+			if (other.bien != null)
+				return false;
+		} else if (!bien.equals(other.bien))
+			return false;
+		if (rdvPromesse == null) {
+			if (other.rdvPromesse != null)
+				return false;
+		} else if (!rdvPromesse.equals(other.rdvPromesse))
+			return false;
+		if (tabAnnonce == null) {
+			if (other.tabAnnonce != null)
+				return false;
+		} else if (!tabAnnonce.equals(other.tabAnnonce))
+			return false;
+		if (tabBienImmobilier == null) {
+			if (other.tabBienImmobilier != null)
+				return false;
+		} else if (!tabBienImmobilier.equals(other.tabBienImmobilier))
+			return false;
+		if (tabBienVendus == null) {
+			if (other.tabBienVendus != null)
+				return false;
+		} else if (!tabBienVendus.equals(other.tabBienVendus))
+			return false;
+		if (tabRdv == null) {
+			if (other.tabRdv != null)
+				return false;
+		} else if (!tabRdv.equals(other.tabRdv))
+			return false;
+		return true;
+	}
+
 	/**
 	 * 
 	 * @param bien bien immobilier à ajouter à l'annonce
@@ -161,4 +214,5 @@ public class Agence {
 	public void tabBienVendus(BienImmobilier bien2) {
 		this.tabBienVendus.add(bien2);		
 	}
+	
 }

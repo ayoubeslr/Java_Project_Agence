@@ -19,14 +19,6 @@ public class PromesseVente {
 	}
 	
 	@Override
-
-	public String toString() {
-
-		return "Prix versé au vendeur: "+this.prixVerseVendeur+" euros\nAdresse du notaire: "+this.adresseNotaire+"\nDate de vente: "+this.dateVente+"\nFrais de vente: "+this.fraisVente+" euros\nCommission: "+this.commission+" euros";
-
-	}
-
-	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
 			return true;
@@ -60,6 +52,15 @@ public class PromesseVente {
 		if (signe != other.signe)
 			return false;
 		return true;
+	}
+
+
+
+	@Override
+	public String toString() {
+
+		return "Prix versé au vendeur: "+this.prixVerseVendeur+" euros\nAdresse du notaire: "+this.adresseNotaire+"\nDate de vente: "+this.dateVente+"\nFrais de vente: "+this.fraisVente+" euros\nCommission: "+this.commission+" euros";
+
 	}
 	
 	
