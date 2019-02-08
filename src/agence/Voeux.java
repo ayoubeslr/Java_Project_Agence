@@ -1,11 +1,11 @@
 package agence;
 
 public class Voeux {
-	protected String typeBienrecherche;
-	protected int prixSouhaite;
-	protected String localisationRecherche;
-	protected int surfaceSolrecherche;
-	protected int nombreDePieceRecherche;
+	public String typeBienrecherche;
+	public int prixSouhaite;
+	public String localisationRecherche;
+	public int surfaceSolrecherche;
+	public int nombreDePieceRecherche;
 	
 	public Voeux(String typeBienrecherche, int prixSouhaite, String localisationRecherche, int surfaceSolrecherche,
 			int nombreDePieceRecherche) {
@@ -16,11 +16,24 @@ public class Voeux {
 		this.nombreDePieceRecherche = nombreDePieceRecherche;
 	}
 	
+	public Voeux(String typeBienrecherche, int prixSouhaite, String localisationRecherche, int surfaceSolrecherche) {
+		this.typeBienrecherche = typeBienrecherche;
+		this.prixSouhaite = prixSouhaite;
+		this.localisationRecherche = localisationRecherche;
+		this.surfaceSolrecherche = surfaceSolrecherche;
+	}
+	
 	@Override
 
 	public String toString() {
-
-		return "Voilà la description de votre voeux: \nType de bien recherché: "+this.typeBienrecherche+"\nPrix souhaité: "+this.prixSouhaite+" euros\nLocalisation recherchée: "+this.localisationRecherche+"\nSurface au sol recherchée: "+this.surfaceSolrecherche+" mètres carrés\nNombre de pièces recherchées: "+this.nombreDePieceRecherche+" pièces";
-
+		if (this.typeBienrecherche.equals("MAISON")) {
+			return "Voilà la description de votre voeux: \nType de bien recherché: "+this.typeBienrecherche+"\nPrix souhaité: "+this.prixSouhaite+" euros\nLocalisation recherchée: "+this.localisationRecherche+"\nSurface au sol recherchée: "+this.surfaceSolrecherche+" mètres carrés\nNombre de pièces recherchées: "+this.nombreDePieceRecherche+" pièces";
+		}
+		else if (this.typeBienrecherche.equals("TERRAIN")) {
+			return "Voilà la description de votre voeux: \nType de bien recherché: "+this.typeBienrecherche+"\nPrix souhaité: "+this.prixSouhaite+" euros\nLocalisation recherchée: "+this.localisationRecherche+"\nSurface au sol recherchée: "+this.surfaceSolrecherche+" mètres carrés";
+		}
+		else {
+			return "Voilà la description de votre voeux: \nType de bien recherché: "+this.typeBienrecherche+"\nPrix souhaité: "+this.prixSouhaite+" euros\nLocalisation recherchée: "+this.localisationRecherche+"\nNombre de pièces recherchées: "+this.nombreDePieceRecherche+" pièces";
+		}
 	}
 }

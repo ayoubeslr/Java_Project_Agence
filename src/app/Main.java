@@ -27,9 +27,9 @@ class Main {
 		System.out.println(Bernard);
 		
 		
-		BienImmobilier bien = agence.ajouterTerrain("TERRAIN", 1, "2 rue des lilas", "sud", 30000, "25/02/2019", 1, 600, 25, Dupont);
+		BienImmobilier bien = agence.ajouterTerrain(1, "2 rue des lilas", "sud", 30000, "25/02/2019", 1, 600, 25, Dupont);
 		
-		BienImmobilier appart = agence.ajouterAppart(2, "36 route des champs", "ouest", 5000, "12/05/2019", 2, 3, 2, 30, Martin);
+		BienImmobilier appart = agence.ajouterAppart(2, "36 route des champs", "ouest", 5000, "12/05/2019", 2, 200, 3, 2, 30, Martin);
 		
 		BienImmobilier maison = agence.ajouterMaison(3, "3 rue des tuillières", "nord", 60000, "02/09/2019", 3, 300, 7, 0, "gaz", Bernard);
 		
@@ -39,15 +39,19 @@ class Main {
 		Personne Acheteur = new Personne("Jordan", "8 avenue des champs Elysées", "0695712263", "jordan@mail.com", "acheteur");
 		System.out.println(Acheteur);
 		
-		Voeux voeux = Acheteur.decrireVoeux("MAISON", 60000, "nord", 300, 7);
+		System.out.println();
+		Voeux voeux = Acheteur.decrireVoeuxMaison("MAISON", 60000, "nord", 300, 7);
 		System.out.println(voeux);
 		
-		String check = agence.checkVoeux(voeux);
+		System.out.println();
+		BienImmobilier check = agence.checkVoeux(voeux);
 		System.out.println(check);
+		System.out.println();
 		
 		
-		PromesseVente promesse = bien.creerPromesseVente("30000", "9 rue de la rose", "24/02/2019", "200");
+		PromesseVente promesse = bien.creerPromesseVente(30000, "9 rue de la rose", "24/02/2019", "200");
 		System.out.println(promesse);
+		System.out.println();
 		Rdv rdvPromesse = agence.prendreRdvPromesseVente(Dupont, Acheteur);
 		System.out.println(rdvPromesse);
 		System.out.println(Acheteur.signerPromesseVente(promesse));
@@ -56,7 +60,7 @@ class Main {
 		
 		agence.tabBienVendus(bien);
 		
-		try ( ObjectOutputStream os = new ObjectOutputStream(new FileOutputStream("StatistiquesVentes.dat")) ) {
+		/*try ( ObjectOutputStream os = new ObjectOutputStream(new FileOutputStream("StatistiquesVentes.dat")) ) {
 			for(BienImmobilier x : agence.tabBienVendus) {
 				System.out.println("Bien vendus = " + x);
 				os.writeObject(x);
@@ -64,7 +68,7 @@ class Main {
 		} catch (IOException e) {
 			System.err.println("Erreur pendant la sérialisation : " + e);
 			System.exit(1);
-			}
+			}*/
 	
 
 }}

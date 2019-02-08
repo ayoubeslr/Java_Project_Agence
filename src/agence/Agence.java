@@ -9,7 +9,7 @@ public class Agence {
 	
 	private List<Annonce> tabAnnonce;
 	private List<Rdv> tabRdv;
-	private List<BienImmobilier> tabBienImmobilier;
+	public List<BienImmobilier> tabBienImmobilier;
 	private Annonce annonce;
 	private Rdv rdvPromesse;
 	private BienImmobilier bien;
@@ -61,7 +61,7 @@ public class Agence {
 	 * @return Retourne le terrain ajouté.
 	 */
 	
-	public BienImmobilier ajouterTerrain(String type, int id, String adresse, String orientation, int prixDemande, String dateVenteSouhaiter, int nInterne, int surfaceAuSole, int longueurDeLaFacade, Personne vendeur) {
+	public BienImmobilier ajouterTerrain(int id, String adresse, String orientation, int prixDemande, String dateVenteSouhaiter, int nInterne, int surfaceAuSole, int longueurDeLaFacade, Personne vendeur) {
 		this.bien = new Terrain(id, adresse, orientation, prixDemande, dateVenteSouhaiter, nInterne, surfaceAuSole, longueurDeLaFacade, vendeur);
 		this.tabBienImmobilier.add(bien);
 		return bien;
@@ -82,8 +82,8 @@ public class Agence {
 	 * @return Retourne l'appartement ajouté.
 	 */
 	
-	public BienImmobilier ajouterAppart(int id, String adresse, String orientation, int prixDemande, String dateVenteSouhaiter, int nInterne, int nombreDePieces, int etage, int chargesMensuelles, Personne vendeur) {
-		this.bien = new Appart(id, adresse, orientation, prixDemande, dateVenteSouhaiter, nInterne, nombreDePieces, etage, chargesMensuelles, vendeur);
+	public BienImmobilier ajouterAppart(int id, String adresse, String orientation, int prixDemande, String dateVenteSouhaiter, int nInterne, int surface, int nombreDePieces, int etage, int chargesMensuelles, Personne vendeur) {
+		this.bien = new Appart(id, adresse, orientation, prixDemande, dateVenteSouhaiter, nInterne, surface, nombreDePieces, etage, chargesMensuelles, vendeur);
 		this.tabBienImmobilier.add(bien);
 		return bien;
 	}
@@ -116,34 +116,37 @@ public class Agence {
 	 * @return Retourne une description d'un voeux correspondant.
 	 */
 	
-	public String checkVoeux(Voeux voeux) {
-		String reponse = null;
+	public BienImmobilier checkVoeux(Voeux voeux) {
+		BienImmobilier reponse = null;
 		for(BienImmobilier x : this.tabBienImmobilier) {
-			if (x.type == "TERRAIN") {
+			if (x.type.equals("TERRAIN")) {
 				Terrain i = (Terrain) x;
-				if ((voeux.localisationRecherche == i.orientation) && (voeux.prixSouhaite  == i.prixDemande) && (voeux.surfaceSolrecherche == i.surfaceAuSol)) {
-					reponse = ("Ce terrain pourrait vous convenir: \n" +i);
+				if ((voeux.typeBienrecherche.equals(i.type)) &&(voeux.localisationRecherche.equals(i.orientation)) && (voeux.prixSouhaite  == i.prixDemande) && (voeux.surfaceSolrecherche == i.surfaceAuSol)) {
+					reponse = i;
+					break;
 				}
 				else {
-					reponse = ("Désolé nous n'avons pas de terrain correspondant à votre voeux.");
+					reponse = null;
 				}
 				}
-			else if (x.type == "APPART") {
+			else if (x.type.equals("APPART")) {
 				Appart i = (Appart) x;
-				if ((voeux.localisationRecherche == i.orientation) && (voeux.prixSouhaite  == i.prixDemande) && (voeux.nombreDePieceRecherche == i.nombreDePieces)) {
-					reponse = ("Cet appartement pourrait vous convenir: \n" +i);
+				if ((voeux.typeBienrecherche.equals(i.type)) && (voeux.localisationRecherche.equals(i.orientation)) && (voeux.prixSouhaite  == i.prixDemande) && (voeux.nombreDePieceRecherche == i.nombreDePieces) && (voeux.surfaceSolrecherche == i.surface)) {
+					reponse = i;
+					break;
 				}
 				else {
-					reponse = ("Désolé nous n'avons pas d'appartement correspondant à votre voeux.");
+					reponse = null;
 				}
 				}
-			else if (x.type == "MAISON") {
+			else if (x.type.equals("MAISON")) {
 				Maison i = (Maison) x;
-				if ((voeux.localisationRecherche == i.orientation) && (voeux.prixSouhaite  == i.prixDemande) && (voeux.nombreDePieceRecherche == i.nombreDePieces) && (voeux.surfaceSolrecherche == i.surfaceHabitable)) {
-					reponse = ("Cette maison pourrait vous convenir: \n" +i);
+				if ((voeux.typeBienrecherche.equals(i.type)) && (voeux.localisationRecherche.equals(i.orientation)) && (voeux.prixSouhaite  == i.prixDemande) && (voeux.nombreDePieceRecherche == i.nombreDePieces) && (voeux.surfaceSolrecherche == i.surfaceHabitable)) {
+					reponse = i;
+					break;
 				}
 				else {
-					reponse = ("Désolé nous n'avons pas de maison correspondant à votre voeux.");
+					reponse = null;
 				}
 			}
 		}

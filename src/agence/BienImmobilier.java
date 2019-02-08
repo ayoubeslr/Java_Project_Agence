@@ -5,13 +5,13 @@ import java.util.List;
 
 public class BienImmobilier {
 	protected int id;
-	protected String adresse;
+	public String adresse;
 	protected String orientation;
-	protected int prixDemande;
-	protected String dateVenteSouhaiter;
+	public int prixDemande;
+	public String dateVenteSouhaiter;
 	protected int nInterne;
 	protected static Personne acheteur;
-	protected Personne vendeur;
+	public Personne vendeur;
 	protected Rdv rdvMandat;
 	protected Rdv vente;
 	protected Rdv visite;
@@ -40,10 +40,6 @@ public class BienImmobilier {
 		
 	}
 	
-	public void Inscrire() {
-		
-	}
-	
 
 	public void ajouterAcheteur(Personne acheteur) {
 		this.acheteur = acheteur; 
@@ -59,8 +55,8 @@ public class BienImmobilier {
 	public void programmerRdvVisite(Rdv visite) {
 		this.visite = visite;}
 	
-	public PromesseVente creerPromesseVente(String prixVerseVendeur, String adresseNotaire, String dateVente, String fraisVente) {
-		this.promesse = new PromesseVente(prixVerseVendeur, adresseNotaire, dateVente, fraisVente);
+	public PromesseVente creerPromesseVente(int prixDemande2, String adresseNotaire, String dateVente, String fraisVente) {
+		this.promesse = new PromesseVente(prixDemande2, adresseNotaire, dateVente, fraisVente);
 		this.tabPromesse.add(this.promesse);
 		return this.promesse;
 	}

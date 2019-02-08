@@ -5,11 +5,13 @@ public class Appart extends BienImmobilier {
 	protected int nombreDePieces;
 	protected int etage;
 	protected int chargesMensuelles;
+	protected int surface;
 	
 	public Appart(int id, String adresse, String orientation, int prixDemande, String dateVenteSouhaiter,
-			int nInterne, int nombreDePieces, int etage, int chargesMensuelles, Personne vendeur) {
+			int nInterne, int surface, int nombreDePieces, int etage, int chargesMensuelles, Personne vendeur) {
 		super(id, adresse, orientation, prixDemande, dateVenteSouhaiter, nInterne, vendeur);
 
+		this.surface = surface;
 		this.nombreDePieces = nombreDePieces;
 		this.etage = etage;
 		this.chargesMensuelles = chargesMensuelles;
