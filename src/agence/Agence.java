@@ -1,11 +1,11 @@
-package agence;
+ package agence;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import agence.Annonce.Media;
 
-public class Agence {
+public class Agence{
 	
 	private List<Annonce> tabAnnonce;
 	private List<Rdv> tabRdv;
