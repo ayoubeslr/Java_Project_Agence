@@ -20,7 +20,11 @@ public class Description {
 		this.media = media;
 	 }
 	
+	public Media getterMedia(){ return this.media; }
+	public List<Docs> getterTabDocs() {return this.tabDocs;}
+	
 	@Override
+	
 	public boolean equals(Object obj) {
 		if (this == obj)
 			return true;
@@ -66,8 +70,8 @@ public class Description {
 
 
 	/**
-		 * Ajoute des documents pour l'annonce.
-		 */
+	 * Ajoute des documents pour l'annonce.
+	 */
 	 
 	 public void ajouterDocuments() {
 			if (this.media == Media.WEB) {

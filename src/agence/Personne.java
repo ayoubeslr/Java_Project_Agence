@@ -1,4 +1,4 @@
-package agence;
+ package agence;
 
 import java.util.List;
 
@@ -22,7 +22,6 @@ public class Personne {
 	@Override
 
 	public String toString() {
-
 		return this.nom;
 
 	}

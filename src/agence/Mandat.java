@@ -9,9 +9,7 @@ public class Mandat {
 	}
 	
 	@Override
-
 	public String toString() {
-
 		return "Vos informations ont été enregistrées, voilà la durée du mandat: "+this.dureeMandat;
 	}
 	
