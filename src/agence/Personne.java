@@ -10,6 +10,14 @@ public class Personne {
 	private String type;
 	private Voeux voeux;
 	
+	/**
+	 * constructeur de la classe Personne
+	 * @param nom
+	 * @param adresse
+	 * @param numeroTel
+	 * @param mail
+	 * @param type
+	 */
 	public Personne(String nom, String adresse, String numeroTel, String mail, String type) {
 		this.nom = nom;
 		this.adresse = adresse;
@@ -19,7 +27,16 @@ public class Personne {
 		this.voeux = null;
 	}
 	
+	/**
+	 * methode getterType
+	 * @return le type
+	 */
 	public String getterType() { return this.type; }
+	
+	/**
+	 * methode getterVoeux
+	 * @return le voeux
+	 */
 	public Voeux getterVoeux() { return this.voeux; }
 
 	@Override

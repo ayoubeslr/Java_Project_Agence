@@ -15,6 +15,9 @@ public class Agence {
 	private BienImmobilier bien;
 	public List<BienImmobilier> tabBienVendus;
 	
+	/**
+	 * constructeur de la classe Agence
+	 */
 	public Agence() {
 		this.tabAnnonce = new ArrayList<Annonce>();
 		this.tabRdv = new ArrayList<Rdv>();
@@ -28,6 +31,9 @@ public class Agence {
 	public BienImmobilier getterBien() { return this.bien; }
 	public List<BienImmobilier> gettertabBienVendus() { return this.tabBienVendus; }
 	
+	/**
+	 * cette methode redefinie equals
+	 */
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)

@@ -4,7 +4,11 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
+/**
+ * 
+ * test de la classe Mandat
+ *
+ */
 class MandatTest {
 	
 	Mandat mandat;

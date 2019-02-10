@@ -5,6 +5,9 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+/**
+ * test de la classe Voeux
+ */
 class VoeuxTest {
 	
 	
@@ -16,7 +19,10 @@ class VoeuxTest {
 		voeux = new Voeux("MAISON", 3000, "orientation", 25, 50);
 		voeux1 = new Voeux("TERRAIN", 3000, "sud", 21);
 	}
-
+	
+	/**
+	 * test de la methode equals
+	 */
 	@Test
 	void testEqualsObject() {
 		assertTrue(voeux.equals(new Voeux("MAISON", 3000, "orientation", 25, 50)));

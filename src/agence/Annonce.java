@@ -9,7 +9,11 @@ public class Annonce {
 	Media media;
 	
 	
-
+	/**
+	 * constructeur de la classe Annonce
+	 * @param bien
+	 * @param mediaChoisi
+	 */
 	public Annonce(BienImmobilier bien, String mediaChoisi) {
 		if (mediaChoisi == "web") {
 			this.media = Media.WEB;
@@ -23,7 +27,9 @@ public class Annonce {
 		this.description = new Description(bien, media);
   }
 	
-
+	/**
+	 * redefinition de la methode equals
+	 */
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -46,9 +52,7 @@ public class Annonce {
 
 
 	@Override
-
 	public String toString() {
-
 		return "Annonce dans "+this.media+ "... description du bien: "+this.description+"";
 
 	}

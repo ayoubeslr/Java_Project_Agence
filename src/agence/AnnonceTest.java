@@ -7,7 +7,11 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import agence.Annonce.Media;
-
+/**
+ * 
+ * test de la classe Annonce
+ *
+ */
 class AnnonceTest {
 	
 	BienImmobilier bien;
@@ -26,14 +30,19 @@ class AnnonceTest {
 		description = new Description(bien, Media.WEB);
 		
 	}
-	
+	/**
+	 * test du equals
+	 */
 	@Test
 	void testEqualsObject() {
 		assertTrue(annonceWeb.equals(new Annonce(bien, "web")));
 		assertTrue(annoncePress.equals(new Annonce(bien, "presse spécialisée")));
 		assertTrue(annonceMedia.equals(new Annonce(bien, "media")));
 	}
-
+	
+	/**
+	 * test du toString
+	 */
 	@Test
 	void testToString() {
 		annonceWeb.toString();

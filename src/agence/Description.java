@@ -14,17 +14,31 @@ public class Description {
 	private Video video;
 	BienImmobilier bien;
 	 
+	/**
+	 * constructeur de la classe Description
+	 * @param bien
+	 * @param media
+	 */
 	 public Description(BienImmobilier bien, Media media) {
 		tabDocs = new ArrayList<Docs>(); 
 		this.bien = bien;
 		this.media = media;
 	 }
 	
+	 /**
+	  * methode getterMedia
+	  * @return media
+	  */
 	public Media getterMedia(){ return this.media; }
+	
+	/**
+	 * mehode getterMedia
+	 * @return tabDocs
+	 */
 	public List<Docs> getterTabDocs() {return this.tabDocs;}
 	
-	@Override
 	
+	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
 			return true;

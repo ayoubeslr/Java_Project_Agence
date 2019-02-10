@@ -9,6 +9,13 @@ public class PromesseVente {
 	Commission commission;
 	boolean signe;
 	
+	/**
+	 * constructeur de la classe PromesseVente
+	 * @param prixDemande2
+	 * @param adresseNotaire
+	 * @param dateVente
+	 * @param fraisVente
+	 */
 	public PromesseVente(int prixDemande2, String adresseNotaire, String dateVente, String fraisVente) {
 		this.prixVerseVendeur = prixDemande2;
 		this.adresseNotaire = adresseNotaire;
@@ -18,6 +25,9 @@ public class PromesseVente {
 		this.signe = false;
 	}
 	
+	/**
+	 * redefinition de la methode equals
+	 */
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)

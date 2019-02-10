@@ -5,6 +5,11 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * test de la classe PromesseVente 
+ *
+ */
 class PromesseVenteTest {
 	
 	PromesseVente promesse;
@@ -15,7 +20,10 @@ class PromesseVenteTest {
 		promesse = new PromesseVente(1000, "adrN", "01/01/2000", "20");
 		commission = new Commission(1000);
 	}
-
+	
+	/**
+	 * test de la methode equals
+	 */
 	@Test
 	void testEqualsObject() {
 		assertTrue(promesse.equals(new PromesseVente(1000, "adrN", "01/01/2000", "20")));

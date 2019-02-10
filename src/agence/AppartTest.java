@@ -6,6 +6,11 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * test la classe Appart
+ *
+ */
 class AppartTest {
 	
 	Appart appart;

@@ -7,6 +7,14 @@ public class Voeux {
 	public int surfaceSolrecherche;
 	public int nombreDePieceRecherche;
 	
+	/**
+	 * constructeur de la classe Voeux
+	 * @param typeBienrecherche
+	 * @param prixSouhaite
+	 * @param localisationRecherche
+	 * @param surfaceSolrecherche
+	 * @param nombreDePieceRecherche
+	 */
 	public Voeux(String typeBienrecherche, int prixSouhaite, String localisationRecherche, int surfaceSolrecherche,
 			int nombreDePieceRecherche) {
 		this.typeBienrecherche = typeBienrecherche;
@@ -16,6 +24,13 @@ public class Voeux {
 		this.nombreDePieceRecherche = nombreDePieceRecherche;
 	}
 	
+	/**
+	 * constructeur de la classe Voeux
+	 * @param typeBienrecherche
+	 * @param prixSouhaite
+	 * @param localisationRecherche
+	 * @param surfaceSolrecherche
+	 */
 	public Voeux(String typeBienrecherche, int prixSouhaite, String localisationRecherche, int surfaceSolrecherche) {
 		this.typeBienrecherche = typeBienrecherche;
 		this.prixSouhaite = prixSouhaite;
@@ -23,7 +38,15 @@ public class Voeux {
 		this.surfaceSolrecherche = surfaceSolrecherche;
 	}
 	
+	/**
+	 * mthode getterTypeBBienRechercher
+	 * @return le type de bien qui est recherche
+	 */
 	public String getterTypeBienRecherhe() { return this.typeBienrecherche; }
+	
+	/**
+	 * redefinition de la methode equals
+	 */
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)

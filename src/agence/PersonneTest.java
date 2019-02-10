@@ -5,6 +5,11 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * test la classe Personne
+ *
+ */
 class PersonneTest {
 	
 	Personne vendeur;
@@ -29,30 +34,48 @@ class PersonneTest {
 	void testToString() {
 		assertEquals("nom", vendeur.toString()); 
 	}
-
+	
+	/**
+	 * test de la methode SignerPromesseVente
+	 */
 	@Test
 	void testSignerPromesseVente() {
 		vendeur.signerPromesseVente(promesse);
 	}
-
+	
+	/**
+	 * test de la methode seDedire
+	 */
 	@Test
 	void testSeDedire() {
 		assertEquals("vendeur", vendeur.getterType());
 		assertEquals("acheteur", acheteur.getterType());
 	}
 
+	/**
+	 * test de la methode decrireVoeuxMaison
+	 * test si les veeuxMaison correspondent
+	 */
 	@Test
 	void testDecrireVoeuxMaison() {
 		vendeur.decrireVoeuxMaison("MAISON", 3000, "orientation", 25, 50);
 		assertEquals( vendeur.getterVoeux(), voeuxMaison);
 	}
-
+	
+	/**
+	 * test de la methode decrireVoeuxTerrain
+	 * test si le voeuxTerrain correspondent 
+	 */
 	@Test
 	void testDecrireVoeuxTerrain() {
 		vendeur.decrireVoeuxTerrain("TERRAIN", 3000, "orientation", 25);
 		assertEquals( vendeur.getterVoeux(), voeuxTerrain);
 	}
-
+	
+	/**
+	 * test de la methode decrireVoeuxAppart
+	 * test si le voeuxAppart correspondent
+	 */
 	@Test
 	void testDecrireVoeuxAppart() {
 		vendeur.decrireVoeuxAppart("APPART", 3000, "orientation", 25, 50);

@@ -6,7 +6,21 @@ public class Maison extends BienImmobilier {
 	protected int nombreDePieces;
 	protected int nombreEtages;
 	protected String moyenDeChauffage;
-
+	
+	/**
+	 * constructeur de la classe Maison
+	 * @param id
+	 * @param adresse
+	 * @param orientation
+	 * @param prixDemande
+	 * @param dateVenteSouhaiter
+	 * @param nInterne
+	 * @param surfaceHabitable
+	 * @param nombreDePieces
+	 * @param nombreEtages
+	 * @param moyenDeChauffage
+	 * @param vendeur
+	 */
 	public Maison(int id, String adresse, String orientation, int prixDemande, String dateVenteSouhaiter,
 			int nInterne, int surfaceHabitable, int nombreDePieces, int nombreEtages, String moyenDeChauffage, Personne vendeur) {
 		super(id, adresse, orientation, prixDemande, dateVenteSouhaiter, nInterne, vendeur);
@@ -21,7 +35,6 @@ public class Maison extends BienImmobilier {
 	@Override
 
 	public String toString() {
-
 		return "Adresse: "+this.adresse+" \n Orientation: "+this.orientation+" \n Prix demandé: "+this.prixDemande+" \n Date de vente souhaitée: "+this.dateVenteSouhaiter+" \n Nom du vendeur: "+this.vendeur+" \n Surface au sol: "+this.surfaceHabitable+" \n Nombre de pièces: "+this.nombreDePieces+" \n Nombre d'étages: "+ this.nombreEtages+"\n Moyen de chauffage: "+this.moyenDeChauffage;
 
 	}

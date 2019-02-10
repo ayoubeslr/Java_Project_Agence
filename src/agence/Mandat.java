@@ -4,6 +4,10 @@ public class Mandat {
 
 	private String dureeMandat;
 	
+	/**
+	 * constructeur de la classe Mandat
+	 * @param dureeMandat
+	 */
 	public Mandat(String dureeMandat) {
 		this.dureeMandat = dureeMandat;
 	}
@@ -13,6 +17,9 @@ public class Mandat {
 		return "Vos informations ont été enregistrées, voilà la durée du mandat: "+this.dureeMandat;
 	}
 	
+	/**
+	 * redefinition de la methode equals
+	 */
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)

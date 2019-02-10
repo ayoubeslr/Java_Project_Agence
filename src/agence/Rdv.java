@@ -5,15 +5,27 @@ public class Rdv {
 	protected Personne personne1;
 	protected Personne personne2;
 	
+	/**
+	 * constructeur de la classe Rdv
+	 * @param personne
+	 */
 	public Rdv(Personne personne) {
 		this.personne1 = personne;
 	}
 	
+	/**
+	 * constructeur de la classe rdv
+	 * @param personne1
+	 * @param personne2
+	 */
 	public Rdv(Personne personne1, Personne personne2) {
 		this.personne1 = personne1;
 		this.personne2 = personne2;
 	}
 	
+	/**
+	 * redefinition de la methode equals
+	 */
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)

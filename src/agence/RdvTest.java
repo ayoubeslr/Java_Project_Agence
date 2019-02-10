@@ -5,6 +5,11 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * test de la classe methode Rdv
+ *
+ */
 class RdvTest {
 
 	Rdv rdv;
@@ -17,7 +22,10 @@ class RdvTest {
 		rdv = new Rdv(personne1, personne2);
 		rdv1 = new Rdv(personne1);
 	}
-
+	
+	/**
+	 * test la methode equals
+	 */
 	@Test
 	void testEqualsObject() {
 		assertTrue(rdv.equals(new Rdv(personne1, personne2)));
