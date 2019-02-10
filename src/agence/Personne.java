@@ -18,9 +18,11 @@ public class Personne {
 		this.type = type;
 		this.voeux = null;
 	}
+	
+	public String getterType() { return this.type; }
+	public Voeux getterVoeux() { return this.voeux; }
 
 	@Override
-
 	public String toString() {
 		return this.nom;
 

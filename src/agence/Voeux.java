@@ -23,6 +23,35 @@ public class Voeux {
 		this.surfaceSolrecherche = surfaceSolrecherche;
 	}
 	
+	public String getterTypeBienRecherhe() { return this.typeBienrecherche; }
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Voeux other = (Voeux) obj;
+		if (localisationRecherche == null) {
+			if (other.localisationRecherche != null)
+				return false;
+		} else if (!localisationRecherche.equals(other.localisationRecherche))
+			return false;
+		if (nombreDePieceRecherche != other.nombreDePieceRecherche)
+			return false;
+		if (prixSouhaite != other.prixSouhaite)
+			return false;
+		if (surfaceSolrecherche != other.surfaceSolrecherche)
+			return false;
+		if (typeBienrecherche == null) {
+			if (other.typeBienrecherche != null)
+				return false;
+		} else if (!typeBienrecherche.equals(other.typeBienrecherche))
+			return false;
+		return true;
+	}
+
 	@Override
 
 	public String toString() {
